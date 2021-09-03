@@ -58,6 +58,7 @@ const Testimonial = {
   userImage: document.querySelector('.user-image'),
   userName: document.querySelector('.user-name'),
   role: document.querySelector('.role'),
+  progressBar: document.querySelector('.progress-bar'),
 
   index: 1,
 
@@ -77,4 +78,4 @@ const Testimonial = {
   }
 }
 
-setInterval(Testimonial.updateTestimonial, 10000);
+Testimonial.progressBar.addEventListener('animationiteration', Testimonial.updateTestimonial)
