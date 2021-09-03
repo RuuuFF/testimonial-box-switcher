@@ -1,9 +1,3 @@
-const testimonialsContainer = document.querySelector('.testimonial-container')
-const testimonial = document.querySelector('.testimonial')
-const userImage = document.querySelector('.user-image')
-const userName = document.querySelector('.user-name')
-const role = document.querySelector('.role')
-
 const testimonials = [
   {
     name: 'Miyah Myles',
@@ -58,22 +52,29 @@ const testimonials = [
   },
 ]
 
-let index = 1
+const Testimonial = {
+  container: document.querySelector('.testimonial-container'),
+  text: document.querySelector('.testimonial'),
+  userImage: document.querySelector('.user-image'),
+  userName: document.querySelector('.user-name'),
+  role: document.querySelector('.role'),
 
-function updateTestimonial() {
-  const { name, position, photo, text } = testimonials[index]
+  index: 1,
+
+  updateTestimonial() {
+    const { name, position, photo, text } = testimonials[Testimonial.index]
+    
+    Testimonial.text.innerHTML= text
+    Testimonial.userImage.src = photo
+    Testimonial.userName.innerHTML = name
+    Testimonial.role.innerHTML = position
   
-  testimonial.innerHTML= text
-  userImage.src = photo
-  userName.innerHTML = name
-  role.innerHTML = position
-
-  index++
-
-  if(index > testimonials.length - 1) {
-    index = 0
+    Testimonial.index++
+  
+    if(Testimonial.index > testimonials.length - 1) {
+      Testimonial.index = 0
+    }
   }
 }
 
-setInterval(updateTestimonial, 10000);
-
+setInterval(Testimonial.updateTestimonial, 10000);
