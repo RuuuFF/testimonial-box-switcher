@@ -12,5 +12,5 @@ Caixa de depoimento que troca o depoimento a cada interação da animação da b
 
 <div align="center">
   <img alt="Testimonial Box Switcher" src="https://i.imgur.com/kTuyKnK.png" width="450px">
-  <p>Confira o resultado: <a href="https://testimonial-box-switcher-ruuuff.netlify.app">Testimonial Box Switches</a></p>
+  <p>Confira o resultado: <a href="https://testimonial-box-switcher-ruuuff.netlify.app">Testimonial Box Switcher</a></p>
 </div>
